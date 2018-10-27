@@ -39,16 +39,11 @@ puts
 puts "[site]  MAKE YOUR TARGET".green
 puts "[help] show this MESSAGE".green
 puts "[exit] show this MESSAGE".green
-puts "[abon] Visit my channel".green
 puts
 else
                             system("#{$option}")
 end
-if $option == "abon" then 
 
-system("start https://www.youtube.com/channel/UChNjaWDxCN0_rP1WKAMUZIA")
-
-end
 if $option == "site" then
     
 	print "Site : ".green
