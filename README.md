@@ -49,10 +49,23 @@ This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear
 # Backdoor Generation 
      {1} Generate Shell
      {2} Connect Shell
-
+     
+# USAGE 
+    1 ----- Help Command 
+    [site]  MAKE YOUR TARGET
+    [help] show this MESSAGE
+    [exit] show this MESSAGE
+    2 ------ Site command 
+    Put your target www.example.com
+    without the http
+    
+    
+    
 # Linux Setup 
 
     git clone https://github.com/bahaabdelwahed/killshot
     cd killshot
-    ruby setup.rb
+    ruby setup.rb (if setup show any error just try to install the gems/tool manual )
     ruby killshot.rb
+    
+   
