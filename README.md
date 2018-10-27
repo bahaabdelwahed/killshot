@@ -8,6 +8,7 @@ whatweb-host-traceroute-dig-fierce-wafw00f or to Identify the cms and to find th
 Cms Exploit Scanner && WebApp Vul Scanner Also You can use killshot to Scan automaticly multiple type of scan with nmap and unicorn . And With this tool You can Generate PHP Simple Backdoors upload it manual and connect to the target using killshot
 
 This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear script To change the content of login paths
+ Spider can help you to find parametre of the site and scan xss and sql 
  
  ![killshot-logo_v1](https://user-images.githubusercontent.com/19738278/47605704-7eaab180-d9f9-11e8-97cc-74fad3dc152c.png)
  
