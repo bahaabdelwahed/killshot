@@ -51,7 +51,8 @@ This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear
      {2} Connect Shell
 
 # Linux Setup 
- git clone https://github.com/bahaabdelwahed/killshot
- cd killshot
- ruby setup.rb
- ruby killshot.rb
+
+    git clone https://github.com/bahaabdelwahed/killshot
+    cd killshot
+    ruby setup.rb
+    ruby killshot.rb
