@@ -68,4 +68,4 @@ This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear
     ruby setup.rb (if setup show any error just try to install the gems/tool manual )
     ruby killshot.rb
     
-   https://www.youtube.com/watch?v=3eP-eHpXNzk&feature=youtu.be
+https://www.youtube.com/watch?v=SEGRh86J6vk
