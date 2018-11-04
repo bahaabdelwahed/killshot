@@ -9,7 +9,6 @@ require "open-uri"
 require "net/http"
 require "socket"
 system("cls")
-system("clear")
 puts "
 
 ██╗  ██╗██╗██╗     ██╗         ███████╗██╗  ██╗ ██████╗ ████████╗
@@ -20,7 +19,7 @@ puts "
 ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝    ╚══════╝╚═╝  ╚═╝ ╚═════╝    ╚═╝   
                                                                  ".red                                                                             
 puts  "
-                                   <Track-Find-Kill>       Gather information
+                                   <Track my Target>       Gather information
                                                                About Targets  
 ".green
 
@@ -36,14 +35,29 @@ if $option == "help"  then
 
 puts
 
-puts "[site]  MAKE YOUR TARGET".green
+puts "[site] MAKE YOUR TARGET".green
 puts "[help] show this MESSAGE".green
 puts "[exit] show this MESSAGE".green
+puts "[uptd] Update KillShot".green
+puts "[info] About killShot".green
 puts
 else
                             system("#{$option}")
 end
+if $option == "info" then
+    puts "
+You Can use this tool to Spider your website and get important information and gather information automaticaly using whatweb-host-traceroute-dig-fierce-wafw00f or to Identify the cms and to find the vulnerability in your website using Cms Exploit Scanner && WebApp Vul Scanner Also You can use killshot to Scan automaticly multiple type of scan with nmap and unicorn . And With this tool You can Generate PHP Simple Backdoors upload it manual and connect to the target using killshot
 
+This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear script To change the content of login paths Spider can help you to find parametre of the site and scan xss and sql
+
+".blue
+
+end
+if $option == "uptd" then 
+
+system("git clone https://github.com/bahaabdelwahed/killshot.git")
+
+end
 if $option == "site" then
     
 	print "Site : ".green
@@ -63,7 +77,7 @@ dX.    9Xb      .dXb    __                         __    dXb.     dXP     .Xb
                         )b.  .dbo.dP'`v'`9b.odb.  .dX(
 
 
-".red# use exemple.txt -------> to order the result of spider remouve duplicate,remouve waring subdomainx...
+".red
 def banner()
     puts "{0} Spider ".green  
     puts "{1} Web technologie " .green
@@ -258,7 +272,7 @@ print " ip For #{$url} :: ".green
 $ipaddr = p Addrinfo.ip("#{$url}").ip_address
 puts "Links And Paths  :: ".red
 $h = Nokogiri::HTML(open("http://#{$url}").read)
-puts "Subdomains  :: ".red
+puts "Related domains and Parameters ::".red
 $h.xpath("//a").each do |img|
 puts img['href']
 end
@@ -428,9 +442,9 @@ linuxlog = [
                    banner()
                    end
                    if $web == "help" then
-                    puts "[ banner ] Show main page"
-                    puts "[ exit ] Exit  "
-                    puts "[ help ] Show this message"
+                    puts "[ banner] Show main page".blue
+                    puts "[ exit  ]   Exit  ".blue
+                    puts "[ help  ] Show this message".blue
                     end
                 
                     if $web == "4" then
@@ -445,7 +459,7 @@ linuxlog = [
                        puts s.scanner()
                     end
 
-                    if File.exist?($web) then 
+                    if $web.prepend[".txt"] then 
                    $aa  = exec("sort #{$web} | grep -e 'http' |cut -d '/' -f 3 | uniq -u")
                  
                     end
@@ -457,20 +471,18 @@ linuxlog = [
                          system("cls")
                          system("clear")
                          puts
-                         puts " [+]Basic WhatWeb Information  :: ".green
-                         system("whatweb #{$url}")
-                         
-                         puts " [+]Host Result :: ".green
-                         system("host #{$url}")
-                         puts " [+]Dig Result About Dns:: ".green
-                         system("dig 8.8.8.8 #{$url} | grep -e 'A' ")
-                         
-                         puts " [+]Trying zone transfer and Brute force :: ".green
-                         system("fierce -dns #{$url} -w dns.txt")
-                         puts " [+]Traceroutr Result :: ".green 
-                         system("traceroute #{$url}")
-                         puts " [+]Firewall And IDS Detect  :: ".green 
-                         system("wafw00f #{$url}")
+                         puts "                WhatWeb Result :: ".green
+                         exec("whatweb #{$url}")
+                         puts "                Host Result :: ".green
+                         exec("host #{$url}")
+                         puts "               Dig Result :: ".green
+                         exec("")
+                         puts "               Revislider Result :: ".green
+                         exec("")
+                         puts "               Dnsmap Result :: ".green
+                         exec("")
+                         puts "               Traceroutr Result :: ".green 
+                         exec("tr")
                    end
                    if $web == "3" then
                     system("clear")
