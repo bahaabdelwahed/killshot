@@ -1,7 +1,10 @@
 #/usr/bin/ruby -w 
 
 puts "Gems Instalation "
-system("gem install colorize && gem install nokogiri")
+system("gem install colorize && gem install net/http && gem install nokogiri && gem install shodan")
 puts "Tools Instalation"
-system("sudo apt-get install nmap && sudo apt-get install whatweb && sudo apt-get install host && sudo apt-get install -y dnsutils
- && sudo apt-get install wafw00f")
+system("git clone https://github.com/Und3rf10w/kali-anonsurf")
+system("apt-get install tor")
+system("cd kali-anonsurf")
+system("./installer.sh")
+system("sudo apt-get install nmap && sudo apt-get install whatweb && sudo apt-get install host ")
