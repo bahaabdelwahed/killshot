@@ -1,4 +1,6 @@
 #/usr/bin/ruby -w
+
+# Xss Detection tool Powred by baha
 require "open-uri"
 require "net/http"
 require "colorize"
