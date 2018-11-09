@@ -8,6 +8,7 @@ require "colorize"
 require "open-uri"
 require "net/http"
 require "socket"
+require 'shodan'
 system("cls")
 puts "
 
@@ -24,12 +25,10 @@ puts  "
 ".green
 
 while true do 
-
 print " track>>> : ".red
 $option = gets.chomp
 if $option == "exit" then
     break
-
 end
 if $option == "help"  then
 
@@ -37,26 +36,86 @@ puts
 
 puts "[site] MAKE YOUR TARGET".green
 puts "[help] show this MESSAGE".green
-puts "[exit] show this MESSAGE".green
+puts "[targ] Search targets".green
+puts "[exit] exit the script".green
 puts "[uptd] Update KillShot".green
+puts "[anon] Run Anonymous Mode".green
 puts "[info] About killShot".green
 puts
-else
-                            system("#{$option}")
+end
+if $option == "anon" then 
+puts
+puts "ANONSURF START **** ".green.on_blue
+system("service tor start ")
+system("anonsurf start")
+puts "Press 99 to stop anonsurf service"
+end
+if $option == "99" then
+system("anonsurf stop service")
+end
+if $option == "targ" then 
+puts "[1] Search Target Shodan".blue 
+puts "[2] Shodan Port Scanner".blue
+end
+if $option == "2" then 
+print "IP :: ".green
+targetportscan = gets.chomp
+$sourceshodan = open("https://www.shodan.io/host/#{targetportscan}").read
+f = File.open("#{targetportscan}.htm","w")
+f.puts $sourceshodan
+f.close
+print "[+]".green
+system("grep -a 'Ports open:'  #{targetportscan}.htm | cut -d '=' -f 3 | cut -d '/' -f 1")
+end 
+if $option == "1" then 
+def bann()
+puts " ""
+████████╗ █████╗ ██████╗  ██████╗ ███████╗████████╗
+╚══██╔══╝██╔══██╗██╔══██╗██╔════╝ ██╔════╝╚══██╔══╝
+   ██║   ███████║██████╔╝██║  ███╗█████╗     ██║   
+   ██║   ██╔══██║██╔══██╗██║   ██║██╔══╝     ██║   
+   ██║   ██║  ██║██║  ██║╚██████╔╝███████╗   ██║   
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   
+                                                   
+                                
+                                            
+                                           
+
+"""
+end
+bann()
+puts "Before you can use the Target, you need to have an API key account.shodan.io and add it to apii.txt"
+apii = open("api.txt")
+my_shodan_api = apii.read
+print "Search : "
+target = gets.chomp
+api = Shodan::Shodan.new("#{my_shodan_api}")
+result = api.search("#{target}")
+file = File.open("result.txt","w") do |f2|
+result['matches'].each{ |host|
+system("clear")
+bann()
+puts "-------------"
+puts host['ip_str']
+f2.puts host['ip_str']
+puts "--------------"
+}
+system("clear")
+bann()
+puts "[+] Success ! Target saved in result.txt".green
+system("pause>nul")
+end
 end
 if $option == "info" then
     puts "
 You Can use this tool to Spider your website and get important information and gather information automaticaly using whatweb-host-traceroute-dig-fierce-wafw00f or to Identify the cms and to find the vulnerability in your website using Cms Exploit Scanner && WebApp Vul Scanner Also You can use killshot to Scan automaticly multiple type of scan with nmap and unicorn . And With this tool You can Generate PHP Simple Backdoors upload it manual and connect to the target using killshot
 
 This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear script To change the content of login paths Spider can help you to find parametre of the site and scan xss and sql
-
+add shodan tools in the last update 
 ".blue
-
 end
 if $option == "uptd" then 
-
 system("git clone https://github.com/bahaabdelwahed/killshot.git")
-
 end
 if $option == "site" then
     
@@ -470,19 +529,20 @@ linuxlog = [
                    if $web == "1" then
                          system("cls")
                          system("clear")
-                         puts
-                         puts "                WhatWeb Result :: ".green
-                         exec("whatweb #{$url}")
-                         puts "                Host Result :: ".green
-                         exec("host #{$url}")
-                         puts "               Dig Result :: ".green
-                         exec("")
-                         puts "               Revislider Result :: ".green
-                         exec("")
-                         puts "               Dnsmap Result :: ".green
-                         exec("")
-                         puts "               Traceroutr Result :: ".green 
-                         exec("tr")
+                         puts " [+]Basic WhatWeb Information  :: ".green
+                         system("whatweb #{$url}")
+                         
+                         puts " [+]Host Result :: ".green
+                         system("host #{$url}")
+                         puts " [+]Dig Result About Dns:: ".green
+                         system("dig 8.8.8.8 #{$url} | grep -e 'A' ")
+                         
+                         puts " [+]Trying zone transfer and Brute force :: ".green
+                         system("fierce -dns #{$url} -w dns.txt")
+                         puts " [+]Traceroutr Result :: ".green 
+                         system("traceroute #{$url}")
+                         puts " [+]Firewall And IDS Detect  :: ".green 
+                         system("wafw00f #{$url}")
                    end
                    if $web == "3" then
                     system("clear")
