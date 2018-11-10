@@ -15,11 +15,23 @@ This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear
    
    
    
-   # Main Page 
+   # Help option
 
 ![help](https://user-images.githubusercontent.com/19738278/48301246-f6dda080-e4ea-11e8-9def-5785fce2653a.JPG)
 
-      
+  
+# Use Shodan By targ option     
+    CreateAccount Here https://account.shodan.io/register and get Your aip https://account.shodan.io/ And Add your shodan AIP to aip.txt
+    < only your aip should be show in the aip.txt >
+   Use targ To search about Vulnrable Targets in shodan databases
+   
+   ![search](https://user-images.githubusercontent.com/19738278/48301291-ed086d00-e4eb-11e8-905c-86b9807e3234.JPG)
+
+  Use targ To scan Ip of servers fast with shodan 
+  
+  ![scan](https://user-images.githubusercontent.com/19738278/48301305-31940880-e4ec-11e8-8a74-35d65b063930.JPG)
+
+    
 # Menu Site
     {0} Spider 
     {1} Web technologie 
