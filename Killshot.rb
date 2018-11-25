@@ -518,10 +518,7 @@ linuxlog = [
                        puts s.scanner()
                     end
 
-                    if $web.prepend[".txt"] then 
-                   $aa  = exec("sort #{$web} | grep -e 'http' |cut -d '/' -f 3 | uniq -u")
-                 
-                    end
+                  
 
                    if $web == "exit" then
                          break
