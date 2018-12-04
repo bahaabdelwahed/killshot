@@ -84,7 +84,10 @@ This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear
     cd killshot
     ruby setup.rb (if setup show any error just try to install the gems/tool manual )
     ruby killshot.rb
-   
+# Windows Setup
+    Download ruby for windows ==> https://rubyinstaller.org/downloads/
+    Download Cmder here       ==> http://cmder.net/
+    Enjoy !
 https://www.youtube.com/watch?v=SEGRh86J6vk
 
 Use KillShot To Detect and Scan cms vulnrability  (Joomla && Wordpress) And Scan For Xss And Sql
