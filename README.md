@@ -3,12 +3,12 @@ A Penetration Testing Framework, Information gathering tool & Website Vulnerabil
 
 **Why KillShot** ?
 
-You Can use this tool to Spider your website and get important information and gather information automaticaly using 
-whatweb-host-traceroute-dig-fierce-wafw00f or to Identify the cms and to find the vulnerability in your website using 
-Cms Exploit Scanner && WebApp Vul Scanner Also You can use killshot to Scan automaticly multiple type of scan with nmap and unicorn . And With this tool You can Generate PHP Simple Backdoors upload it manual and connect to the target using killshot
+You can use this tool to Spider your website and get important information and automatically gather information using 
+whatweb-host-traceroute-dig-fierce-wafw00f or identify the CMS and find the vulnerability in your website using 
+Cms Exploit Scanner & WebApp Vul Scanner Also You can use Killshot to automatically scan multiple types of scanning tools such as nmap and unicorn. And With this tool, You can Generate PHP Simple Backdoors upload it manually and connect to the target using Killshot.
 
-This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear script To change the content of login paths
- Spider can help you to find parametre of the site and scan xss and sql 
+This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear script To change the content of login paths.
+ Spider can help you to find the parameter of the site and scan XSS and SQL.
  
  ![killshot-logo_v1](https://user-images.githubusercontent.com/19738278/47605704-7eaab180-d9f9-11e8-97cc-74fad3dc152c.png)
  
@@ -23,7 +23,7 @@ This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear
 # Use Shodan By targ option     
    CreateAccount Here [Register](https://account.shodan.io/register) and get Your aip [Shodan AIP](https://account.shodan.io/) And Add your shodan AIP to aip.txt
     < only your aip should be show in the aip.txt >
-   Use targ To search about Vulnrable Targets in shodan databases
+   Use targ to search about Vulnrable Targets in shodan databases
    
    ![search](https://user-images.githubusercontent.com/19738278/48301291-ed086d00-e4eb-11e8-905c-86b9807e3234.JPG)
 
@@ -34,7 +34,7 @@ This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear
     
 # Menu Site
     {0} Spider 
-    {1} Web technologie 
+    {1} Web technology 
     {2} WebApp Vul Scanner
     {3} Port Scanner
     {4} CMS Scanner
@@ -90,6 +90,6 @@ This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear
     Enjoy !
 https://www.youtube.com/watch?v=SEGRh86J6vk
 
-Use KillShot To Detect and Scan cms vulnrability  (Joomla && Wordpress) And Scan For Xss And Sql
+Use KillShot To Detect and Scan CMS vulnerabilities (Joomla && Wordpress) And Scan For XSS And SQL
 
 https://www.youtube.com/watch?v=QPF-rppYSOY
