@@ -139,7 +139,7 @@ dX.    9Xb      .dXb    __                         __    dXb.     dXP     .Xb
 ".red
 def banner()
     puts "{0} Spider ".green  
-    puts "{1} Web technologie " .green
+    puts "{1} Web technology " .green
     puts "{2} WebApp Vul Scanner" .green
     puts "{3} Port Scanner".green
     puts "{4} CMS Scanner".green
