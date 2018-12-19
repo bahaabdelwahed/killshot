@@ -88,8 +88,11 @@ This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear
     Download ruby for windows ==> https://rubyinstaller.org/downloads/
     Download Cmder here       ==> http://cmder.net/
     Enjoy !
+  # LAST_Update
+     [+] Fix setup error 
 https://www.youtube.com/watch?v=SEGRh86J6vk
 
 Use KillShot To Detect and Scan cms vulnrability  (Joomla && Wordpress) And Scan For Xss And Sql
 
 https://www.youtube.com/watch?v=QPF-rppYSOY
+
