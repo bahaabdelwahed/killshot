@@ -23,7 +23,7 @@ puts "
                                                                  ".red                                                                             
 puts  "
                                    <Track my Target>       Gather information
-                                                               About Targets   V1.5
+                                                               About Targets
 ".green
 
 while true do 
