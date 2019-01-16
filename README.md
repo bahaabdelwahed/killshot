@@ -99,6 +99,8 @@ https://www.youtube.com/watch?v=SEGRh86J6vk
 Use KillShot To Detect and Scan cms vulnrability  (Joomla && Wordpress) And Scan For Xss And Sql
 
 https://www.youtube.com/watch?v=QPF-rppYSOY
+
+
 Please Any one who find any error/bugs in any code contact me also if you want to add some codes
 or to upgrade some codes in killshot just contact me  
  <trying to make hacking better>
