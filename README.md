@@ -110,6 +110,7 @@ or to upgrade some codes in killshot just contact me
  
  # references
   Vulnrability are taken from 
+           
            1) http://www.exploit-db.com
            2) https://sploitus.com
            3) http://cxsecurity.com
