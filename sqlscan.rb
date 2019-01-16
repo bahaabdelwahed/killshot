@@ -40,7 +40,7 @@ end
 $site = open("#{target}#{i}", 'User-Agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0b8pre) Gecko/20101114 Firefox/4.0b8pre').read
 
  
-if($site["You have an erro"].nil?)  then 
+if($site["You have an erro"].nil?) and ($site["SQL"].nil?) and ($site["MYSQL"].nil?)then 
 	puts "#{target}"
 	puts "Test N : #{e}"
 	puts"=============== >[*] Not vulnrable\n\n".green
