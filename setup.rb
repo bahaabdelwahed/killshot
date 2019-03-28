@@ -1,6 +1,6 @@
 #/usr/bin/ruby -w 
 
-puts "Gems Instalation "
+puts "Gems Installation "
 system("gem install colorize && gem install shodan && gem install rest-client")
 system("sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev")
 system("gem install nokogiri")
