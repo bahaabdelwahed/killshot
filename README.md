@@ -1,14 +1,14 @@
+This project is no longer maintained !
  # KILLSHOT  
 A Penetration Testing Framework, Information gathering tool & Website Vulnerability Scanner
 
-**Why KillShot** ?
+Why KillShot?
 
-You Can use this tool to Spider your website and get important information and gather information automaticaly using 
-whatweb-host-traceroute-dig-fierce-wafw00f or to Identify the cms and to find the vulnerability in your website using 
-Cms Exploit Scanner && WebApp Vul Scanner Also You can use killshot to Scan automaticly multiple type of scan with nmap and unicorn . And With this tool You can Generate PHP Simple Backdoors upload it manual and connect to the target using killshot
+You can use this tool to spider your website, gather important information, and automate data collection using tools such as WhatWeb, Host, Traceroute, Dig, Fierce, and WafW00f. It also allows you to identify the CMS and find vulnerabilities in your website using a CMS Exploit Scanner and a Web Application Vulnerability Scanner.
 
-This Tool Bearing A simple Ruby Fuzzer Tested on VULSERV.exe And Linux Log clear script To change the content of login paths
- Spider can help you to find parametre of the site and scan xss and sql 
+Additionally, KillShot can automatically perform multiple types of scans using Nmap and Unicorn. With this tool, you can also generate simple PHP backdoors, upload them manually, and connect to the target using KillShot.
+
+This tool also includes a simple Ruby fuzzer tested on VULSERV.exe, as well as a Linux log-cleaning script to modify login path content. The spider feature helps you find website parameters and scan for XSS and SQL injection vulnerabilities.
  
  ![killshot-logo_v1](https://user-images.githubusercontent.com/19738278/47605704-7eaab180-d9f9-11e8-97cc-74fad3dc152c.png)
  
